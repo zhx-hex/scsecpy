@@ -1,6 +1,6 @@
 # coding:utf-8
-# Python-Requests/Python-bs4-lxml/edu_src自动化信息收集（fofa）
-# data：2023-10-15
+# Python-requests/Python-bs4-lxml/edu_src自动化信息收集（fofa）
+# date：2023-10-15
 
 import requests
 import time
