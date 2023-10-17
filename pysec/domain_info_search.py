@@ -1,4 +1,4 @@
-# !coding:utf-8
+# coding:utf-8
 # 免费API对域名相关信息查询 - https://api.oioweb.cn/ & http://api.btstu.cn/
 # date:2023-10-17
 
@@ -15,7 +15,6 @@ class Domain_Info_Search:
     def whois_search(self):
         tatget_url = 'https://api.oioweb.cn/api/site/whois?domain={}'.format(str(self.target_domain))
         print('\n---> ' + tatget_url)
-
         try:
             result = requests.get(tatget_url).json()
             if result is not None and result['code'] == 200:
@@ -38,13 +37,12 @@ class Domain_Info_Search:
     def ICP_search(self):
         tatget_url = 'http://api.btstu.cn/icp/api.php?domain={}'.format(str(self.target_domain))
         print('\n---> ' + tatget_url)
-
         try:
             result = requests.get(tatget_url).json()
             if result['code'] == 200:
                 print('[主办单位名称]：' + result['主办单位名称'])
                 print('[主办单位性质]: ' + result['主办单位性质'])    
-                print('[域名持有人/机构名称]: ' + result['主办单位性质'])
+                print('[域名持有人/机构名称]: ' + result['域名持有人/机构名称'])
                 print('[网站备案/许可证号]: ' + result['网站备案/许可证号'])
                 print('[网站名称]: ' + result['网站名称'])
                 print('[网站首页网址]: ' + result['网站首页网址'])
