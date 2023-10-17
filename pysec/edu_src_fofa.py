@@ -116,3 +116,4 @@ if __name__ == '__main__':
     my_fofa_token = ''
 
     es.get_from_fofa(my_fofa_token,url_list=url_list)
+
