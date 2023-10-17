@@ -39,7 +39,7 @@ class Domain_Info_Search:
         print('\n---> ' + tatget_url)
         try:
             result = requests.get(tatget_url).json()
-            if result['code'] == 200:
+            if result is not None and result['code'] == 200:
                 print('[主办单位名称]：' + result['主办单位名称'])
                 print('[主办单位性质]: ' + result['主办单位性质'])    
                 print('[域名持有人/机构名称]: ' + result['域名持有人/机构名称'])
