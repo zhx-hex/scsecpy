@@ -6,7 +6,7 @@ import json
 import os
 import requests
 import time
-
+import sys
 
 def file_scan(filename):
     try:
@@ -27,7 +27,7 @@ def file_scan(filename):
 if __name__ == '__main__':
 
     # 待检测文件路径
-    file_name = ''
+    file_name = str(sys.argv[1])
 
     file_scan(file_name)
     
