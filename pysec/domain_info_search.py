@@ -16,7 +16,7 @@ class Domain_Info_Search:
         tatget_url = 'https://api.oioweb.cn/api/site/whois?domain={}'.format(str(self.target_domain))
         print('\n---> ' + tatget_url)
         try:
-            result = requests.get(tatget_url).json()
+            result = requests.get(tatget_url,headers=self.header).json()
             if result is not None and result['code'] == 200:
                 print('[域名]：' + result['result']['DomainName'])
                 print('[注册商]: ' + result['result']['Registrant'])    
